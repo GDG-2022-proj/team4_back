@@ -15,13 +15,9 @@ import javax.persistence.*;
 public class Score {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ColumnDefault("0")
     private int score;
 
-//        @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
 }

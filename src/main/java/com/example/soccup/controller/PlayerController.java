@@ -14,12 +14,14 @@ public class PlayerController {
     @Autowired
     PlayerService playerService = new PlayerService();
 
+    @CrossOrigin
     @GetMapping("player/{id}")
     public Player detail(@PathVariable Long id){
         Player player = playerService.detail(id);
         return player;
     }
 
+    @CrossOrigin
     @GetMapping("player/")
     public Player search(@RequestParam(value="name") String name){
         Player player = playerService.search(name);
