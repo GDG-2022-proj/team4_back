@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GameController {
 
         @GetMapping("game/")
-        public List<Player> player(){
-            return
+        public List<Integer> player(){
+            return null;
         }
 }
