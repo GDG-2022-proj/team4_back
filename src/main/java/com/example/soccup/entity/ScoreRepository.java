@@ -10,5 +10,5 @@ import java.awt.*;
 @Repository
 public interface ScoreRepository extends JpaRepository<Score,Long> {
   //  @Query(value = "select * from score where player_id = :playerId",nativeQuery = true)
-    Score findByPlayerId(@Param("id") Long playerId);
+  //  Score findByPlayerId(@Param("id") Long playerId);
 }
