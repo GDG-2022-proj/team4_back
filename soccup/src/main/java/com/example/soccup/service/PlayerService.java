@@ -14,5 +14,10 @@ public class PlayerService {
     public Player detail(Long id){
         return playerRepository.findById(id).orElse(null);
     }
+    public Player search(String name){
+        String input = "%"+name+"%";
+        Player player = playerRepository.findIdByName(input);
+        return player;
+    }
 
 }
