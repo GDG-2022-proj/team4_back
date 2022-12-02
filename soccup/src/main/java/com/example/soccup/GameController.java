@@ -12,7 +12,7 @@ import java.util.List;
 public class GameController {
 
         @GetMapping("game/")
-        public List<Integer> player(List<Integer> playerList){
+        public List<Integer> playerShuffle(List<Integer> playerList){
             Collections.shuffle(playerList);
             return playerList;
         }
