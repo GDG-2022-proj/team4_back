@@ -4,9 +4,9 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.ColumnDefault;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Getter
 @Setter
@@ -15,11 +15,6 @@ import javax.persistence.*;
 public class Score {
 
     @Id
-    @OneToOne
-    @JoinColumn(name ="player_id")
-    private Player player;
-
-    @ColumnDefault("0")
+    private Long player_id;
     private int score;
-
 }
