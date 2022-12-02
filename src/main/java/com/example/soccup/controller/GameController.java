@@ -16,7 +16,7 @@ public class GameController {
         @Autowired
         PlayerRepository playerRepository;
         @Autowired
-        ScoreService scoreService = new ScoreService();
+        ScoreService scoreService;
 
         @CrossOrigin
         @GetMapping("game/")
