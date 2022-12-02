@@ -15,11 +15,13 @@ import javax.persistence.*;
 public class Score {
 
     @Id
-    @OneToOne
-    @JoinColumn(name ="player_id")
-    private Player player;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ColumnDefault("0")
     private int score;
 
+//        @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 }
