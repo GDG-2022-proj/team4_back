@@ -1,8 +1,6 @@
 package com.example.soccup.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,9 +10,12 @@ import java.util.List;
 public class GameController {
 
         @GetMapping("game/")
-        public List<Integer> playerShuffle(List<Integer> playerList){
+        public List<Integer> playerShuffle(@RequestParam(value="playerList") List<Integer> playerList){
             Collections.shuffle(playerList);
             return playerList;
         }
+        @PostMapping("game/")
+        public void playerScoreUP(@RequestParam(value="id") int id){
 
+        }
 }
